@@ -1,1 +1,15 @@
-
+{
+  "groups": {
+    "group:rdp-users": ["alice@example.com", "bob@example.com"]
+  },
+  "hosts": {
+    "win-pc": "100.78.32.102"
+  },
+  "acls": [
+    {
+      "action": "accept",
+      "users": ["group:rdp-users"],
+      "ports": ["win-pc:3389"]
+    }
+  ]
+}
